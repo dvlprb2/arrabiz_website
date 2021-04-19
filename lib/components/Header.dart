@@ -20,6 +20,8 @@ class _HeaderState extends State<Header> {
             FadeInImage(
               placeholder: MemoryImage(kTransparentImage),
               image: AssetImage('assets/logo.png'),
+              width: 100.0,
+              height: 100.0,
             ).box.margin(Vx.mOnly(top: 24.0)).make(),
             // Image.asset(
             //   'logo.png',
@@ -50,7 +52,7 @@ class _HeaderState extends State<Header> {
                 .box
                 .margin(Vx.mOnly(bottom: 8.0))
                 .make(),
-            "We have initiated a free & open source app for all small businesses \nto easily do invoicing and view reports of day to day business."
+            "We have initiated a free & open source app for all small businesses to easily do invoicing and view reports of day to day business."
                 .text
                 .bodyText2(context)
                 .center
@@ -65,7 +67,7 @@ class _HeaderState extends State<Header> {
               style: ButtonStyle(
                   backgroundColor:
                   MaterialStateProperty.all<Color>(Vx.teal600)),
-            ).w(100.0),
+            ).w(150.0),
             FadeInImage(
               placeholder: MemoryImage(kTransparentImage),
               image: AssetImage('assets/mockup.png'),
@@ -79,7 +81,7 @@ class _HeaderState extends State<Header> {
           'assets/waves.svg',
           color: Vx.teal100,
           width: context.screenWidth,
-        ).box.make()
+        )
       ]),
       web: ZStack([
         Positioned.fill(

@@ -3,86 +3,73 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:transparent_image/transparent_image.dart';
 
-
 class Header extends StatefulWidget {
   @override
   _HeaderState createState() => _HeaderState();
 }
 
 class _HeaderState extends State<Header> {
-
   @override
   Widget build(BuildContext context) {
     return VxDevice(
-      mobile: VStack([
-        VStack(
-          [
-            FadeInImage(
-              placeholder: MemoryImage(kTransparentImage),
-              image: AssetImage('assets/logo.png'),
-              width: 100.0,
-              height: 100.0,
-            ).box.margin(Vx.mOnly(top: 24.0)).make(),
-            // Image.asset(
-            //   'logo.png',
-            //   width: 100,
-            //   height: 100,
-            // ).,
-            "Arrabiz"
-                .text
-                .uppercase
-                .letterSpacing(4.6)
-                .xl
-                .teal600
-                .semiBold
-                .lineHeight(1.5)
-                .make()
-                .box
-                .margin(Vx.mOnly(bottom: 24.0))
-                .width(100.0)
-                .make(),
-            "Empowering your \nBusiness process"
-                .text
-                .black
-                .bold
-                .headline4(context)
-                .center
-                .lineHeight(1.0)
-                .make()
-                .box
-                .margin(Vx.mOnly(bottom: 8.0))
-                .make(),
-            "We have initiated a free & open source app for all small businesses to easily do invoicing and view reports of day to day business."
-                .text
-                .bodyText2(context)
-                .center
-                .coolGray500
-                .make()
-                .box
-                .margin(Vx.mOnly(bottom: 8.0))
-                .make(),
-            ElevatedButton(
-              onPressed: () => null,
-              child: "Try it now".text.uppercase.make(),
-              style: ButtonStyle(
-                  backgroundColor:
-                  MaterialStateProperty.all<Color>(Vx.teal600)),
-            ).w(150.0),
-            FadeInImage(
-              placeholder: MemoryImage(kTransparentImage),
-              image: AssetImage('assets/mockup.png'),
-              fit: BoxFit.cover,
-            )
-          ],
-          alignment: MainAxisAlignment.spaceBetween,
-          crossAlignment: CrossAxisAlignment.center,
-        ).box.teal100.width(context.screenWidth).make(),
-        SvgPicture.asset(
-          'assets/waves.svg',
-          color: Vx.teal100,
-          width: context.screenWidth,
-        )
-      ]),
+      mobile: VStack(
+        [
+          FadeInImage(
+            placeholder: MemoryImage(kTransparentImage),
+            image: AssetImage('assets/logo.png'),
+            width: 100.0,
+            height: 100.0,
+          ).box.margin(Vx.mOnly(top: 24.0)).make(),
+          "Arrabiz"
+              .text
+              .uppercase
+              .letterSpacing(2.0)
+              .xl
+              .teal600
+              .semiBold
+              .center
+              .lineHeight(1.5)
+              .make()
+              .box
+              .margin(Vx.mOnly(bottom: 24.0))
+              .width(100.0)
+              .make(),
+          "Empowering your \nBusiness process"
+              .text
+              .black
+              .bold
+              .headline4(context)
+              .center
+              .lineHeight(1.0)
+              .make()
+              .box
+              .margin(Vx.mOnly(bottom: 8.0))
+              .make(),
+          "We have initiated a free & open source app for all small businesses to easily do invoicing and view reports of day to day business."
+              .text
+              .bodyText2(context)
+              .center
+              .coolGray500
+              .make()
+              .box
+              .margin(Vx.mOnly(bottom: 8.0, left: 8.0, right: 8.0))
+              .make(),
+          ElevatedButton(
+            onPressed: () => null,
+            child: "Try it now".text.uppercase.make(),
+            style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(Vx.teal600)),
+          ).w(150.0),
+          FadeInImage(
+            placeholder: MemoryImage(kTransparentImage),
+            image: AssetImage('assets/mockup.png'),
+            fit: BoxFit.cover,
+            height: 500.0,
+          )
+        ],
+        alignment: MainAxisAlignment.spaceBetween,
+        crossAlignment: CrossAxisAlignment.center,
+      ).box.teal100.width(context.screenWidth).make(),
       web: ZStack([
         Positioned.fill(
           child: HStack(
@@ -127,7 +114,7 @@ class _HeaderState extends State<Header> {
                     child: "Try it now".text.uppercase.make(),
                     style: ButtonStyle(
                         backgroundColor:
-                        MaterialStateProperty.all<Color>(Vx.teal600)),
+                            MaterialStateProperty.all<Color>(Vx.teal600)),
                   ).w(100.0).py12()
                 ],
               ),
@@ -146,7 +133,6 @@ class _HeaderState extends State<Header> {
             alignment: Alignment.bottomCenter,
             child: SvgPicture.asset(
               'assets/waves.svg',
-              color: Vx.teal100,
               width: context.screenWidth,
             ),
           ),
@@ -160,4 +146,3 @@ class _HeaderState extends State<Header> {
     );
   }
 }
-

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -17,35 +18,34 @@ class Footer extends StatelessWidget {
             .bodyText2(context)
             .make(),
         HStack([
-          InkWell(
-            onTap: () {
+          IconButton(
+            onPressed: () async {
               if(canLaunch(instagramURL) != null){
-                launch(instagramURL);
+                await launch(instagramURL);
               } else {
                 print("Invalid URL");
               }
             },
-            child: SvgPicture.asset(
-              'assets/instagram.svg',
+            icon: Icon(
+              MdiIcons.instagram,
               color: Vx.coolGray400,
-              width: 40.0,
             ),
+            iconSize: 24.0,
           ),
-          SizedBox(width: 10.0),
-          InkWell(
-            onTap: () async {
+          IconButton(
+            onPressed: () async {
               if(canLaunch(githubURL) != null){
                 await launch(githubURL);
               } else {
                 print("Invalid URL");
               }
             },
-            child: SvgPicture.asset(
-              'assets/github.svg',
+            icon: Icon(
+              MdiIcons.github,
               color: Vx.coolGray400,
-              width: 40.0,
             ),
-          )
+            iconSize: 24.0,
+          ),
         ])
       ],
       alignment: MainAxisAlignment.spaceBetween,
@@ -53,7 +53,7 @@ class Footer extends StatelessWidget {
         .box
         .width(context.screenWidth)
         .height(64.0)
-        .px24
+        .padding(EdgeInsets.symmetric(horizontal: context.isMobile ? 12 : 24))
         .withDecoration(
             BoxDecoration(border: Border(top: BorderSide(color: Vx.coolGray200))))
         .make();

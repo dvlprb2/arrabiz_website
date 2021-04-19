@@ -19,7 +19,7 @@ class _HeaderState extends State<Header> {
           [
             FadeInImage(
               placeholder: MemoryImage(kTransparentImage),
-              image: AssetImage('logo.png'),
+              image: AssetImage('assets/logo.png'),
             ).box.margin(Vx.mOnly(top: 24.0)).make(),
             // Image.asset(
             //   'logo.png',
@@ -68,7 +68,7 @@ class _HeaderState extends State<Header> {
             ).w(100.0),
             FadeInImage(
               placeholder: MemoryImage(kTransparentImage),
-              image: AssetImage('mockup.png'),
+              image: AssetImage('assets/mockup.png'),
               fit: BoxFit.cover,
             )
           ],
@@ -76,7 +76,7 @@ class _HeaderState extends State<Header> {
           crossAlignment: CrossAxisAlignment.center,
         ).box.teal100.width(context.screenWidth).make(),
         SvgPicture.asset(
-          'waves.svg',
+          'assets/waves.svg',
           color: Vx.teal100,
           width: context.screenWidth,
         ).box.make()
@@ -88,7 +88,7 @@ class _HeaderState extends State<Header> {
               VStack(
                 [
                   Image.asset(
-                    'logo.png',
+                    'assets/logo.png',
                     width: 100,
                     height: 100,
                   ).box.make(),
@@ -130,7 +130,7 @@ class _HeaderState extends State<Header> {
                 ],
               ),
               Image.asset(
-                'mockup.png',
+                'assets/mockup.png',
                 fit: BoxFit.cover,
               ),
             ],
@@ -143,7 +143,7 @@ class _HeaderState extends State<Header> {
           child: Align(
             alignment: Alignment.bottomCenter,
             child: SvgPicture.asset(
-              'waves.svg',
+              'assets/waves.svg',
               color: Vx.teal100,
               width: context.screenWidth,
             ),

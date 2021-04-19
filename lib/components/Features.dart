@@ -19,21 +19,21 @@ class _FeaturesState extends State<Features> {
           VStack(
             [
               Feature(
-                icon: 'invoice.png',
+                icon: 'assets/invoice.png',
                 title: 'Create your Estimates & Invoices',
                 description:
                 'Create estimates and invoices on the go. Maintain an easy '
                     'flow of creating estimates for your services & products with convert to invoice option.',
               ),
               Feature(
-                icon: 'backup.png',
+                icon: 'assets/backup.png',
                 title: "Safe and Quick Data Backup",
                 description:
                 'Providing an smooth data backup option with GOOGLE DRIVE with daily, weekly, monthly'
                     ' and when I tap backup options to keep your data safe & secure',
               ),
               Feature(
-                icon: 'reports.png',
+                icon: 'assets/reports.png',
                 title: "Detailed and Accurate Reports",
                 description:
                 'View monthly sales reports with ease and differentiate with PAID & UNPAID '
@@ -56,21 +56,21 @@ class _FeaturesState extends State<Features> {
           HStack(
             [
               Feature(
-                icon: 'invoice.png',
+                icon: 'assets/invoice.png',
                 title: 'Create your Estimates & Invoices',
                 description:
                     'Create estimates and invoices on the go. Maintain an easy '
                         'flow of creating estimates for your services & products with convert to invoice option.',
               ),
               Feature(
-                icon: 'backup.png',
+                icon: 'assets/backup.png',
                 title: "Safe and Quick Data Backup",
                 description:
                     'Providing an smooth data backup option with GOOGLE DRIVE with daily, weekly, monthly'
                         ' and when I tap backup options to keep your data safe & secure',
               ),
               Feature(
-                icon: 'reports.png',
+                icon: 'assets/reports.png',
                 title: "Detailed and Accurate Reports",
                 description:
                     'View monthly sales reports with ease and differentiate with PAID & UNPAID '

@@ -26,7 +26,7 @@ class Footer extends StatelessWidget {
               }
             },
             child: SvgPicture.asset(
-              'instagram.svg',
+              'assets/instagram.svg',
               color: Vx.coolGray400,
               width: 40.0,
             ),
@@ -41,7 +41,7 @@ class Footer extends StatelessWidget {
               }
             },
             child: SvgPicture.asset(
-              'github.svg',
+              'assets/github.svg',
               color: Vx.coolGray400,
               width: 40.0,
             ),
